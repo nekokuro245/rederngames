@@ -1,0 +1,213 @@
+.header{
+    /* background-image: linear-gradient(0, #68DAFF, #64D1F9); */
+    background-image: linear-gradient(0, #222222, #1C1F24);
+    height: var(--header-height);
+    padding: 0 16px;
+}
+
+.header__nav{
+    
+}
+
+.header__nav-logo-link{
+    color: transparent;
+    text-decoration: none;
+    display: block;
+    line-height: 0;
+}
+
+.header__nav-logo{
+    padding: 4px 0;
+}
+
+.header__nav-logo-img{
+    width: 100%;
+    height: 60px;
+}
+
+.header__nav-list{
+    list-style: none;
+    margin: 0;
+    padding-left: 0;
+}
+
+.header__nav-list-heading{
+    color: var(--text-color);
+}
+
+.header__nav-link-roms,
+.header__nav-link{
+    position: relative;
+    display: block;
+    text-align: center;
+    line-height: 68px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    text-decoration: none;
+    z-index: 111111;
+}
+
+.header__nav-link-roms::before,
+.header__nav-link::before{
+    content: "";
+    width: 40%;
+    display: block;
+    position: absolute;
+    right: 50%;
+    top: 80%;
+    transform: translateX(50%);
+    transition: width 0.5s;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.header__nav-link:hover,
+.header__nav-link-roms:hover{
+    color: rgba(229, 229, 229, 0.8);
+}
+
+.header__nav-link:hover::before,
+.header__nav-link-roms:hover::before{
+    width: 60%;
+}
+
+.header__nav-list-sub{
+    position: absolute;
+    top: 69px;
+    left: 50%;
+    width: 1200px;
+    transform: translateX(-50%);
+    background-color: #1C2025;
+    list-style: none;
+    padding: 6px 0;
+    animation: inFade linear 0.2s;
+    box-shadow: 0 1px 10px 0 rgba(229, 229, 229, 0.5);
+    display: none;
+}
+
+.header__nav-list-sub::before{
+    content: "";
+    position: absolute;
+    top: -15px;
+    left: 220px;
+    width: 10%;
+    height: 20px;
+    background-color: transparent;
+}
+
+.header__nav-item-sub{
+    position: relative;
+    margin: auto;
+    text-align: center;
+    z-index: 111;
+}
+
+.header__nav-link-main{
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 50%;
+    height: 100%;
+    animation: inFade ease-in 0.3s, width linear 0.3s;
+    transform: translateX(-50%);
+    background-image: linear-gradient(to bottom, rgba(229, 229, 229, 0.3), rgba(135, 135, 135,0.2));
+    border-radius: 2px;
+    display: none;
+}
+
+.header__nav-item-sub:hover .header__nav-link-main{
+    width: 90%;
+    display: block;
+}
+
+.header__nav-item-sub-wrap{
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    animation: inFade linear 0.2s;
+}
+
+.header__nav-item-roms:hover .header__nav-item-sub-wrap{
+    display: inline-flex;
+}
+
+.header__nav-item-sub-wrap::before{
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    width: 80%;
+    transition: width 0.5s;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.header__nav-item-sub-wrap::after{
+    content: "";
+    position: absolute;
+    top: 95%;
+    left: 50%;
+    transform: translateX(-50%);
+    right: 0;
+    width: 0;
+    transition: width 0.5s;
+    border-bottom: 2px solid var(--blue-border-color);
+}
+
+
+.header__nav-item-sub:hover .header__nav-item-sub-wrap::after{
+    width: 80%;
+    display: block;
+}
+
+.header__nav-item-sub:hover .header__nav-link-sub{
+    color: var(--primary-color);
+}
+
+.header__nav-link-sub{
+    font-size: 1.4rem;
+    line-height: 1.8rem;
+    text-decoration: none;
+    color: var(--text-color);
+    display: block;
+    padding: 0 12px;
+}
+
+.header__nav-item-sub__img{
+    background-repeat: no-repeat;
+    background-size: contain; /*Dùng để fix nếu ảnh quá to so với thẻ chứa nó*/
+    background-position: center;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+}
+
+
+.header__nav-user{
+    text-align: center;
+}
+
+.header__nav-user i{
+    color: var(--text-color);
+}
+
+.header__nav-user-link{
+    text-decoration: none;
+    line-height: 68px;
+    font-size: 1.5rem;
+    color: var(--text-color);
+    margin: 0 4px;
+}
+
+.header__nav-user-icon{
+    font-size: 1.5rem;
+    line-height: 68px;
+    text-align: center;
+}
+
+.slider{
+    width: 100%;
+    height: 900px;
+    background-color: #000;
+}
